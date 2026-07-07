@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afropop Worldwide · Thank-you playlist</title>
+  <meta name="description" content="A donor thank-you playlist from Afropop Worldwide with archive notes, Afropop articles, and a lossless download.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A playlist you can wander through · Afropop Worldwide">
+  <meta property="og:description" content="Twelve tracks for supporters, paired with Afropop articles, audio programs, and archive notes — plus a lossless download of the originals.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Ceyvion/thankyouplaylist/main/assets/photos/hero-backdrop.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0e100f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0e100f;
+      --cream: #fffce1;
+      --muted: #8a8979;
+      --line: #42433d;
+      --green: #0ae448;
+      --orange: #ff8709;
+      --pink: #fec5fb;
+      --lilac: #9d95ff;
+      --blue: #00bae2;
+      --font-display: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-note: "Caveat", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--black);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 72% 11%, rgba(157, 149, 255, 0.1), transparent 25rem),
+        radial-gradient(circle at 13% 43%, rgba(10, 228, 72, 0.04), transparent 31rem),
+        linear-gradient(180deg, rgba(255, 252, 225, 0.018), transparent 22rem),
+        var(--black);
+      color: var(--cream);
+      font-family: var(--font-display);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255, 252, 225, 0.024) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 252, 225, 0.018) 1px, transparent 1px);
+      background-size: 44px 44px, 44px 44px;
+      mix-blend-mode: screen;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .stage {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 520px);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 26px 22px 42px;
+      overflow: visible;
+      isolation: isolate;
+    }
+
+    .nav {
+      position: relative;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 52px;
+    }
+
+    .brand {
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .menu {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      gap: 5px;
+      place-content: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+    }
+
+    .menu span {
+      display: block;
+      width: 23px;
+      height: 1.5px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .annotation {
+      font-family: var(--font-note);
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .hero .annotation {
+      margin-bottom: 16px;
+      color: color-mix(in srgb, var(--cream) 86%, var(--green));
+    }
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      isolation: isolate;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      max-width: 11ch;
+      margin: 0 0 22px;
+      color: var(--cream);
+      font-size: 64px;
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .headline-line {
+      display: block;
+      will-change: transform, opacity;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 350px;
+      margin: 0;
+      color: color-mix(in srgb, var(--cream) 74%, var(--muted));
+      font-size: 19px;
+      line-height: 1.24;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .backdrop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 0;
+      height: min(78vh, 620px);
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .backdrop img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 60% 12%;
+      filter: saturate(0.92) contrast(1.04) brightness(0.86);
+    }
+
+    .backdrop::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(14, 16, 15, 0.12) 0%, rgba(14, 16, 15, 0.42) 44%, rgba(14, 16, 15, 0.85) 78%, var(--black) 97%),
+        linear-gradient(90deg, rgba(14, 16, 15, 0.62) 0%, rgba(14, 16, 15, 0.28) 38%, rgba(14, 16, 15, 0.1) 68%, rgba(14, 16, 15, 0.4) 100%);
+    }
+
+    .hero h1,
+    .hero-copy {
+      text-shadow: 0 2px 26px rgba(14, 16, 15, 0.55);
+    }
+
+    .actions {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      gap: 24px;
+      margin: 34px 0 46px;
+      will-change: transform, opacity;
+    }
+
+    .action-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.38;
+      letter-spacing: 0;
+      max-width: 350px;
+    }
+
+    .ghost-pill,
+    .link-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--cream);
+      border-radius: 999px;
+      background: rgba(14, 16, 15, 0.12);
+      color: var(--cream);
+      transition:
+        transform 150ms cubic-bezier(0.23, 1, 0.32, 1),
+        border-color 150ms ease,
+        background 150ms ease;
+    }
+
+    .ghost-pill {
+      gap: 16px;
+      min-height: 64px;
+      padding: 14px 22px;
+      background: rgba(14, 16, 15, 0.72);
+      backdrop-filter: blur(8px);
+      font-size: 21px;
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .ghost-pill:active,
+    .link-chip:active {
+      transform: scale(0.985);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .ghost-pill:hover,
+      .link-chip:hover {
+        border-color: color-mix(in srgb, var(--cream) 72%, var(--green));
+        background: rgba(255, 252, 225, 0.035);
+      }
+    }
+
+    .ghost-pill svg {
+      width: 27px;
+      height: 27px;
+      flex: 0 0 auto;
+    }
+
+    .ghost-pill .label {
+      color: var(--cream);
+      white-space: nowrap;
+    }
+
+    .download {
+      color: var(--blue);
+    }
+
+    .intro-rule {
+      height: 1px;
+      margin: 0 0 26px;
+      background: var(--line);
+    }
+
+    .section-head {
+      position: relative;
+      z-index: 2;
+      margin: 0 0 28px;
+    }
+
+    .section-head h2 {
+      max-width: 8ch;
+      margin: 14px 0 12px;
+      font-size: 46px;
+      line-height: 0.96;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 390px;
+      margin: 0;
+      color: color-mix(in srgb, var(--cream) 65%, var(--muted));
+      font-size: 18px;
+      line-height: 1.32;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .exhibits {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .exhibit {
+      position: relative;
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 14px 16px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .number {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .exhibit-photo {
+      position: relative;
+      grid-column: 2;
+      margin: 0;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--cream) 16%, transparent);
+      border-radius: 12px;
+      background: rgba(255, 252, 225, 0.03);
+    }
+
+    .exhibit-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) sepia(0.24) contrast(1.06) brightness(0.92);
+      transform: scale(1.01);
+      transition:
+        filter 420ms ease,
+        transform 640ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .exhibit:hover .exhibit-photo img {
+        filter: none;
+        transform: scale(1.045);
+      }
+    }
+
+    .exhibit-photo::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(14, 16, 15, 0.55);
+    }
+
+    .exhibit-photo.related::after {
+      background: var(--orange);
+    }
+
+    .exhibit-photo.note::after {
+      background: var(--lilac);
+    }
+
+    .exhibits.js-reveal .exhibit {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 700ms cubic-bezier(0.23, 1, 0.32, 1),
+        transform 700ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .exhibits.js-reveal .exhibit.is-in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .exhibit-main {
+      min-width: 0;
+      grid-column: 2;
+    }
+
+    .artist {
+      margin: 0;
+      color: var(--cream);
+      font-size: 24px;
+      line-height: 1.02;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .track-title {
+      margin: 7px 0 8px;
+      font-size: 19px;
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .track-title.direct {
+      color: var(--green);
+    }
+
+    .track-title.related {
+      color: var(--orange);
+    }
+
+    .track-title.note {
+      color: var(--lilac);
+    }
+
+    .exhibit-note {
+      margin: 0;
+      color: color-mix(in srgb, var(--cream) 58%, var(--muted));
+      font-size: 15.5px;
+      line-height: 1.32;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .links {
+      grid-column: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .link-chip {
+      min-height: 34px;
+      padding: 7px 13px;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .link-chip.direct {
+      color: var(--green);
+      border-color: color-mix(in srgb, var(--green) 72%, var(--cream));
+    }
+
+    .link-chip.related {
+      color: var(--orange);
+      border-color: color-mix(in srgb, var(--orange) 72%, var(--cream));
+    }
+
+    .link-chip.audio {
+      color: var(--blue);
+      border-color: color-mix(in srgb, var(--blue) 72%, var(--cream));
+    }
+
+    .archive-label {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      border: 1px solid color-mix(in srgb, var(--lilac) 68%, var(--cream));
+      border-radius: 999px;
+      padding: 7px 13px;
+      color: var(--lilac);
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .curator {
+      position: relative;
+      z-index: 2;
+      margin: 34px 0 34px;
+      padding: 23px 0 64px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .curator p {
+      max-width: 390px;
+      margin: 14px 0 0;
+      color: color-mix(in srgb, var(--cream) 65%, var(--muted));
+      font-size: 18px;
+      line-height: 1.32;
+      font-weight: 500;
+    }
+
+    .chalk-arrow {
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      width: 238px;
+      pointer-events: none;
+      opacity: 0.9;
+      transform: rotate(-3deg);
+    }
+
+    footer {
+      position: relative;
+      z-index: 2;
+      color: color-mix(in srgb, var(--cream) 72%, var(--muted));
+      font-size: 17px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px 24px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid color-mix(in srgb, var(--cream) 42%, transparent);
+      border-radius: 50%;
+      color: var(--cream);
+      transition:
+        transform 150ms cubic-bezier(0.23, 1, 0.32, 1),
+        border-color 150ms ease,
+        background 150ms ease;
+    }
+
+    .social svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .social:active {
+      transform: scale(0.96);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .social:hover {
+        border-color: color-mix(in srgb, var(--cream) 72%, var(--green));
+        background: rgba(255, 252, 225, 0.05);
+      }
+    }
+
+    .credits {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .credits summary {
+      width: fit-content;
+      cursor: pointer;
+      color: color-mix(in srgb, var(--cream) 52%, var(--muted));
+      font-weight: 600;
+    }
+
+    .credits p {
+      max-width: 62ch;
+      margin: 10px 0 0;
+    }
+
+    .dot {
+      display: inline-block;
+      margin: 0 10px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 390px) {
+      .stage {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .backdrop {
+        height: min(70vh, 540px);
+      }
+
+      .ghost-pill {
+        font-size: 19px;
+      }
+
+      .exhibit {
+        grid-template-columns: 48px minmax(0, 1fr);
+      }
+
+      .number {
+        font-size: 30px;
+      }
+
+      .artist {
+        font-size: 22px;
+      }
+
+      .track-title {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 760px) {
+      body {
+        display: grid;
+        place-items: start center;
+      }
+
+      .stage {
+        width: 820px;
+        max-width: 100%;
+        padding: 38px 46px 56px;
+      }
+
+      .nav {
+        margin-bottom: 64px;
+      }
+
+      .hero h1 {
+        max-width: 12ch;
+        font-size: 92px;
+      }
+
+      .hero-copy {
+        max-width: 575px;
+        font-size: 23px;
+      }
+
+      .backdrop {
+        height: min(88vh, 720px);
+      }
+
+      .actions {
+        max-width: 575px;
+        gap: 26px;
+      }
+
+      .ghost-pill {
+        width: min(100%, 360px);
+        min-height: 66px;
+        font-size: 20px;
+      }
+
+      .action-note {
+        max-width: 500px;
+        font-size: 17px;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 30px;
+        align-items: end;
+      }
+
+      .section-head h2 {
+        font-size: 56px;
+      }
+
+      .section-head p {
+        font-size: 19px;
+      }
+
+      .exhibit {
+        grid-template-columns: 76px 172px minmax(0, 1fr) 236px;
+        align-items: start;
+        gap: 22px;
+        padding: 26px 0;
+      }
+
+      .number {
+        font-size: 40px;
+      }
+
+      .exhibit-photo {
+        grid-column: 2;
+        aspect-ratio: 1 / 1;
+      }
+
+      .exhibit-main {
+        grid-column: 3;
+      }
+
+      .artist {
+        font-size: 28px;
+      }
+
+      .track-title {
+        font-size: 21px;
+      }
+
+      .exhibit-note {
+        max-width: 330px;
+        font-size: 16px;
+      }
+
+      .links {
+        grid-column: 4;
+        justify-content: flex-start;
+        align-content: start;
+        padding: 2px 0 0;
+      }
+
+      .curator {
+        padding-bottom: 74px;
+      }
+
+      .chalk-arrow {
+        width: 300px;
+        right: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .headline-line {
+        will-change: auto;
+      }
+
+      .ghost-pill,
+      .link-chip,
+      .exhibit-photo img {
+        transition-duration: 1ms;
+      }
+
+      .exhibits.js-reveal .exhibit {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <img src="assets/photos/hero-backdrop.jpg" alt="" fetchpriority="high">
+  </div>
+  <main class="stage">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="https://afropop.org">Afropop Worldwide</a>
+      <button class="menu" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="annotation">{ a thank-you, from all of us at Afropop }</div>
+      <h1 id="page-title" class="headline">
+        <span class="headline-line">A playlist you</span>
+        <span class="headline-line">can wander</span>
+        <span class="headline-line">through</span>
+      </h1>
+      <p class="hero-copy">Thank you for keeping this music on the air. In gratitude, we put together twelve recordings from our archive, paired with Afropop articles, radio programs, and listening notes — for whenever you want to stay a little longer.</p>
+    </section>
+
+    <section class="actions" aria-label="Playlist actions">
+      <a class="ghost-pill" href="https://drive.usercontent.google.com/download?id=170K1qMCwiRmcdkRD239qIcb5EXjZBaG4&export=download&confirm=t" download>
+        <svg class="download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <path d="M7 10l5 5 5-5"/>
+          <path d="M12 15V3"/>
+        </svg>
+        <span class="label">Download originals</span>
+      </a>
+      <p class="action-note">The complete set is yours to keep — a lossless download, straight from our shelves. Streaming services don't carry every one of these recordings, so the guide below stays centered on the originals.</p>
+    </section>
+
+    <div class="intro-rule" aria-hidden="true"></div>
+
+    <section class="section-head" aria-labelledby="listening-room">
+      <div>
+        <div class="annotation">{ artist guide }</div>
+        <h2 id="listening-room" class="headline">
+          <span class="headline-line">The listening</span>
+          <span class="headline-line">room</span>
+        </h2>
+      </div>
+      <p>Some stops open into Afropop articles and radio programs drawn from four decades of reporting. Others stay intentionally spare — we let the recording speak for itself.</p>
+    </section>
+
+    <ol class="exhibits">
+      <li class="exhibit">
+        <span class="number">01</span>
+        <figure class="exhibit-photo direct">
+          <img src="assets/photos/djeneba-dieneba-diakite-afropop.jpg" alt="Dieneba Diakite" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Dugu Kamelmba</h3>
+          <div class="track-title direct">Djeneba Diakite</div>
+          <p class="exhibit-note">A Mali Stars-era thread connected to Wassoulou singer Dieneba Diakite in Afropop's Afro-Paris photo essay.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip direct" href="https://www.afropop.org/articles/time-travel-through-afro-paris-photo-essay">Afropop article</a>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">02</span>
+        <figure class="exhibit-photo related">
+          <img src="assets/photos/wassoulou-trio-context-afropop.jpg" alt="Women of Wassoulou, from the Afropop archive" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Adebola</h3>
+          <div class="track-title related">Wassoulou Trio</div>
+          <p class="exhibit-note">Related reading on Wassoulou voices and the wider Malian tradition around this file.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip related" href="https://www.afropop.org/articles/the-women-of-wassoulou-music-a-primer">Wassoulou primer</a>
+          <a class="link-chip related" href="https://www.afropop.org/articles/kokanko-sata-doumba-a-queen-of-wassoulou-music-visits-the-american-south">Related article</a>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">03</span>
+        <figure class="exhibit-photo direct">
+          <img src="assets/photos/rail-band-afropop-lp.jpg" alt="Rail Band LP artwork" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Rail Band</h3>
+          <div class="track-title direct">Rehearsal, 1993</div>
+          <p class="exhibit-note">Afropop's Mali archive connects the Super Rail Band to Bamako, Mory Kante, and Salif Keita's orbit.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip audio" href="https://www.afropop.org/audio-programs/mali-magic-2000">Audio program</a>
+          <a class="link-chip direct" href="https://www.afropop.org/articles/remembering-mory-kante">Afropop article</a>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">04</span>
+        <figure class="exhibit-photo note">
+          <img src="assets/photos/bibi-theresa-context-tape-reel.jpg" alt="Reel-to-reel tape" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Rumbanella</h3>
+          <div class="track-title note">Masanga / Bibi Theresa</div>
+          <p class="exhibit-note">A rare archive selection, left close to the way it arrived: voice, rhythm, and room tone carrying the story.</p>
+        </div>
+        <div class="links">
+          <span class="archive-label">Archive selection</span>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">05</span>
+        <figure class="exhibit-photo note">
+          <img src="assets/photos/rumbanella-context-archive-tape.jpg" alt="Tape recorder collection" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Rumbanella</h3>
+          <div class="track-title note">Zam Swing</div>
+          <p class="exhibit-note">A companion Rumbanella cut from the same archive grouping, held here as a second doorway into the set.</p>
+        </div>
+        <div class="links">
+          <span class="archive-label">Archive selection</span>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">06</span>
+        <figure class="exhibit-photo note">
+          <img src="assets/photos/john-ngwandangwanda-mugariro-context-mbira.jpg" alt="Mbira" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">John Ngwandangwanda Mugariro</h3>
+          <div class="track-title note">Archive file</div>
+          <p class="exhibit-note">A field-recording-style stop where the file credit does the introducing and the performance carries the rest.</p>
+        </div>
+        <div class="links">
+          <span class="archive-label">Archive selection</span>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">07</span>
+        <figure class="exhibit-photo direct">
+          <img src="assets/photos/thomas-mapfumo-commons.jpg" alt="Thomas Mapfumo performing" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Thomas Mapfumo</h3>
+          <div class="track-title direct">Nyoka Musango</div>
+          <p class="exhibit-note">A deep Afropop trail: live recordings, war-years context, and the exile story around Zimbabwe's chimurenga giant.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip audio" href="https://www.afropop.org/audio-programs/thomas-mapfumo-live-in-nyc-at-sobs">Audio program</a>
+          <a class="link-chip audio" href="https://www.afropop.org/audio-programs/thomas-mapfumo-the-war-years">War years</a>
+          <a class="link-chip direct" href="https://www.afropop.org/articles/thomas-mapfumo-the-path-to-exile">Afropop article</a>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">08</span>
+        <figure class="exhibit-photo note">
+          <img src="assets/photos/kava-unga-heti-context-tape-reel.jpg" alt="Prerecorded tape reel" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Kava Unga Heti</h3>
+          <div class="track-title note">Germans</div>
+          <p class="exhibit-note">A compact archive cut, presented as a listening-room moment rather than a footnoted article.</p>
+        </div>
+        <div class="links">
+          <span class="archive-label">Archive selection</span>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">09</span>
+        <figure class="exhibit-photo direct">
+          <img src="assets/photos/khaled-commons.jpg" alt="Khaled performing in Oran" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Khaled</h3>
+          <div class="track-title direct">Liberte, live at Olympia</div>
+          <p class="exhibit-note">Khaled opens into an Afropop interview and the wider rai story around his voice and perspective.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip direct" href="https://www.afropop.org/articles/khaled-2004-part-i">Khaled interview</a>
+          <a class="link-chip related" href="https://www.afropop.org/articles/the-story-of-rai-2">Rai feature</a>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">10</span>
+        <figure class="exhibit-photo direct">
+          <img src="assets/photos/nuba-noor-context-nubian-lute.jpg" alt="Nubian lute" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Nuba Noor</h3>
+          <div class="track-title direct">Wao Nuba Numu</div>
+          <p class="exhibit-note">Afropop's Living Traditions feature names Nuba Noor in a section on Sudanese echoes and Nubian culture.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip direct" href="https://www.afropop.org/articles/feature-living-traditions">Afropop article</a>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">11</span>
+        <figure class="exhibit-photo note">
+          <img src="assets/photos/yayi-kanoute-context-kora.jpg" alt="Kora, the 21-string West African harp" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Yayi Kanoute</h3>
+          <div class="track-title note">Jeliya</div>
+          <p class="exhibit-note">A jeliya-rooted archive selection, placed here as a quiet listening stop before the full download.</p>
+        </div>
+        <div class="links">
+          <span class="archive-label">Archive selection</span>
+        </div>
+      </li>
+
+      <li class="exhibit">
+        <span class="number">12</span>
+        <figure class="exhibit-photo related">
+          <img src="assets/photos/coumba-sidibe-context-wassoulou-afropop.jpg" alt="Wassoulou musicians, from the Afropop archive" loading="lazy">
+        </figure>
+        <div class="exhibit-main">
+          <h3 class="artist">Coumba Sidibe</h3>
+          <div class="track-title related">Djanjon</div>
+          <p class="exhibit-note">Related Afropop context points toward Coumba Sidibe's Wassoulou legacy and Abdoulaye Alhassane Toure's Songhai world.</p>
+        </div>
+        <div class="links">
+          <a class="link-chip related" href="https://www.afropop.org/articles/sidiba">Related mention</a>
+          <a class="link-chip related" href="https://www.afropop.org/articles/new-songhai-music-from-malian-north-abdoulaye-alhassane-toure-and-sidi-toure-2">Collaborator context</a>
+        </div>
+      </li>
+    </ol>
+
+    <section class="curator" aria-label="Curator note">
+      <div class="annotation">{ complete files included }</div>
+      <p>Take the whole archive home first, then return to these notes whenever you'd like to listen more slowly. They'll be here — and so will we.</p>
+      <img class="chalk-arrow" src="assets/chalk-arrow.png" alt="" aria-hidden="true">
+    </section>
+
+    <footer>
+      <div class="footer-row">
+        <span>Afropop Worldwide <span class="dot">&middot;</span> Thank-you playlist</span>
+        <div class="socials" aria-label="Afropop Worldwide on social media">
+          <a class="social" href="https://instagram.com/afropopworldwide/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+              <circle cx="12" cy="12" r="4.3"/>
+              <line x1="17.4" y1="6.6" x2="17.41" y2="6.6"/>
+            </svg>
+          </a>
+          <a class="social" href="https://www.facebook.com/afropop" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a class="social" href="https://www.youtube.com/user/afropopworldwide" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.92 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <details class="credits">
+        <summary>Photo credits</summary>
+        <p>Dieneba Diakite, Women of Wassoulou, Rail Band LP &amp; Wassoulou musicians: Afropop Worldwide archive. Thomas Mapfumo: Anya Wassenberg (CC BY 3.0). Khaled: Magharebia (CC BY 2.0). Tape reels: Sameer Verma (CC BY-SA 2.0). Tape recorders: kosheahan (CC BY 2.0). Mbira: Juan Carlos Fonseca Mata (CC BY-SA 4.0). Kora: KannanShanmugamstudio (CC BY-SA 3.0). Nubian lute: The Metropolitan Museum of Art (CC0). Sourced via Wikimedia Commons.</p>
+      </details>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!window.gsap || reduceMotion) {
+        return;
+      }
+
+      gsap.timeline({ defaults: { ease: "power3.out" } })
+        .from(".backdrop", {
+          autoAlpha: 0,
+          y: -26,
+          scale: 1.04,
+          transformOrigin: "50% 0%",
+          duration: 1.5,
+          ease: "power2.out"
+        }, 0)
+        .from(".nav", { autoAlpha: 0, y: -12, duration: 0.42 }, 0.15)
+        .from(".hero .annotation", { autoAlpha: 0, y: 12, duration: 0.4 }, "-=0.18")
+        .from(".hero .headline-line", {
+          autoAlpha: 0,
+          y: 34,
+          duration: 0.72,
+          stagger: 0.07
+        }, "-=0.16")
+        .from(".hero-copy", { autoAlpha: 0, y: 16, duration: 0.48 }, "-=0.3")
+        .from(".actions", {
+          autoAlpha: 0,
+          y: 18,
+          duration: 0.45
+        }, "-=0.24");
+
+      const sectionTitle = document.querySelector(".section-head .headline");
+
+      if (sectionTitle) {
+        const revealSectionTitle = () => {
+          gsap.from(".section-head .headline-line", {
+            autoAlpha: 0,
+            y: 24,
+            duration: 0.62,
+            stagger: 0.07,
+            ease: "power3.out"
+          });
+        };
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver((entries) => {
+            if (!entries.some((entry) => entry.isIntersecting)) {
+              return;
+            }
+
+            revealSectionTitle();
+            observer.disconnect();
+          }, { threshold: 0.35 });
+
+          observer.observe(sectionTitle);
+        } else {
+          revealSectionTitle();
+        }
+      }
+    })();
+  </script>
+  <script>
+    (() => {
+      const list = document.querySelector(".exhibits");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!list || reduceMotion || !("IntersectionObserver" in window)) {
+        return;
+      }
+
+      list.classList.add("js-reveal");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+
+      list.querySelectorAll(".exhibit").forEach((item) => observer.observe(item));
+    })();
+  </script>
+</body>
+</html>

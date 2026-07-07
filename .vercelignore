@@ -1,0 +1,15 @@
+verification
+.vercelignore
+assets/.DS_Store
+assets/artist-images
+assets/*-original-checker.png
+assets/highlighter-squiggle*.png
+*.zip
+*.flac
+*.mp3
+*.wav
+*.aif
+*.aiff
+.env
+.env.*
+.vercel

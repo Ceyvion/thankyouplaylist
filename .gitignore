@@ -1,0 +1,9 @@
+.DS_Store
+.vercel/
+verification/
+*.zip
+*.flac
+*.mp3
+*.wav
+.env
+.env.*
